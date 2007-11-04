@@ -13,7 +13,7 @@ public class Client{
    // Es busca el servei ServicioX -- forward
    // Localitzem i instanciem objecte de la classe remota RemoteImpl
    // I obtenim el RemoteImplStub   
-   RemoteInterface c = (RemoteInterface)Naming.lookup("rmi://localhost/ServicioX");
+   RemoteInterface c = (RemoteInterface)Naming.lookup("rmi://localhost:1099/ServicioX");
    System.out.println( c.incr(4) );
    System.out.println( c.mesg("Luis") );
   }
