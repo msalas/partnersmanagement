@@ -18,6 +18,7 @@ public class Servidor extends JFrame {
     private JButton jButton2;
     private JLabel jLabel1;
     private ServidorModel sm;
+    private JOptionPane jOptionPane;
     public Servidor() {
         
         sm = new ServidorModel();
@@ -30,7 +31,8 @@ public class Servidor extends JFrame {
         jLabel1 = new JLabel();
         jButton1 = new JButton();
         jButton2 = new JButton();
-
+        jOptionPane = new JOptionPane();
+        
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("Gesti\u00f3 del servidor RMI de MySandwich");
         jLabel1.setText("Pendent d'iniciar el servidor RMI de la PAC 3");
@@ -78,7 +80,7 @@ public class Servidor extends JFrame {
     }
 
     private void jButton2ActionPerformed(ActionEvent evt) {
-
+    	crearError("aaaaa","aaaaaa");
         sm.aturarServidor();
         jLabel1.setText("Servidor Aturat!");
         jLabel1.setForeground(Color.RED);
@@ -91,6 +93,10 @@ public class Servidor extends JFrame {
         jLabel1.setForeground(Color.BLUE);
     }
     
+    private void crearError(String missatge,String titol){
+           
+        jOptionPane.showMessageDialog(this,missatge,titol,JOptionPane.ERROR_MESSAGE);
+    }
     /**
      * @param args the command line arguments
      */
