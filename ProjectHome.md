@@ -1,0 +1,1 @@
+Studying exercise using RMI, JDBC and Swing to provide some functionalities to Partners management.
